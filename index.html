@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="public/css/styles.css">
   <title>Frontend Mentor | Profile card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,21 +16,40 @@
   </style>
 </head>
 <body>
-  Victor Crest
-  26
-  London
+  <div class="d-flex-center container">  
+    <div class="main">
+      <div class="card">
+        <div class="card-header d-flex-center">
+           <img class="img-profile" src="public/img/img-profile.jpg" alt="" srcset=""> 
+        </div>      
+        <div class="card-body d-flex-center">
+            <div class="personal-info ">
+              <p class="p-55"><span class="black">Victor Crest </span> 26</p>
+              <p class="city">London</p>
+            </div>
+        </div>
+        <div class="card-footer">
+          <ul class="analitics">
+            <li class="analitics-item"><span class="black">80K</span>
+              Followers
+            </li>
+            <li class="analitics-item"><span class="black">803K</span>
+              Likes
+            </li>
+            <li class="analitics-item"><span class="black">1.4K</span>
+              Photos
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  80K
-  Followers
-
-  803K
-  Likes
-
-  1.4K
-  Photos
+  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">I´m Freelancer dev</a>.
   </div>
+  <script src="public/js/main.js"></script>
 </body>
 </html>
