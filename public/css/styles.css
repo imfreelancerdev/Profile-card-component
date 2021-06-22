@@ -11,7 +11,6 @@
   color:var(--secondary);
 }
 .bg-primary{
-  background: var(--background);
 }
 *{
   margin: 0;
@@ -19,6 +18,12 @@
   box-sizing: border-box;
   font-family: 'Kumbh Sans', sans-serif;
   font-size: 18px;
+}
+body{
+  background: var(--background);  
+  background-image: url("../img/bg-pattern-top.svg"),url("../img/bg-pattern-bottom.svg");
+  background-repeat: no-repeat,no-repeat;
+  background-position: -87% 200%,170% -140%;
 }
 
 .container{
@@ -121,6 +126,13 @@
 @media (max-width: 767.98px) {  
   .main {
      width:80%; 
+     
+  }
+  body {
+  background-image: url("../img/bg-pattern-top.svg"),url("../img/bg-pattern-bottom.svg");
+  background-size: 650px 650px,650px 650px ; 
+    background-repeat: no-repeat,no-repeat;
+    background-position: 270% -5000%,-150% 4980%;
   }
 }
 @media (min-width: 767.98px) {  
