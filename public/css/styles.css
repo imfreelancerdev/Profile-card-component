@@ -1,9 +1,17 @@
 :root{
-  --background:#19a1ad;
-  --background-secondary: #3dcad3;
-  --text-primary: #313445;
-  --text-secondary: #b9babe;
+  --primary: rgb(45, 50, 72);
+  --secondary: rgb(106, 111, 129);
+  --background:rgb(25, 162, 174);
   --line: #e7e7e7;
+}
+.primary{
+  color:var(--primary);
+}
+.secondary{
+  color:var(--secondary);
+}
+.bg-primary{
+  background: var(--background);
 }
 *{
   margin: 0;
@@ -12,9 +20,7 @@
   font-family: 'Kumbh Sans', sans-serif;
   font-size: 18px;
 }
-body {
-  background-color: var(--background) ;
-}
+
 .container{
   
   width: 100%;
@@ -26,44 +32,45 @@ body {
   justify-content: center;
 }
 .main {
-  width: 30%;
-
+  width: 28.5%;
+  padding-top:22px;
 }
 .card{
   width: 100%;
-
   border-radius: 12px;
-  background:#fff;
+  background:#fff; 
 }
 .card-header{
-  height: 120px;
-  background-image: url(../img/bg-card.jpg);
-  background-size: contain;
+  height: 153px;
+  background-image: url(../img/bg-pattern-card.svg) ;
+  background-repeat:no-repeat; 
+  background-size: cover; 
+  background-position: center;
   border-radius: 12px 12px 0 0;
 
 }
 .card-body{
-  height: 170px;
+  height: 160px;
 
 }
 .card-footer{
-  height: 80px;
+  height: 98px;
   border-top:1px solid var(--line)
 
 }
 .img-profile{
   position: relative;
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 114px;
+  height: 114px;
   border: 4px solid #fff;
-  top:55px;
+  top:75px;
 }
 .analitics{
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-content: center;
+  align-content: space-between;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -78,10 +85,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width:30%;
   line-height: 25px;
-  margin-top: 12px;
-
+  margin-top: 28px;
+  width: 26%;
 }
 .black{
   font-weight: 700;
@@ -90,21 +96,44 @@ body {
 .personal-info{
   width: 80%;
   text-align: center;
+  letter-spacing: .1em;
 }
 .p-55{
-  padding-top: 55px;
+  padding-top: 56px;
+  padding-bottom: 10px;
 }
 .city{
-  line-height: 32px;
+  line-height: 22px;
+  font-size: .75rem;
 }
+.secondary{
+  font-size: .75rem;
+  font-weight: 400;
+}
+
+/* Media querys from bootstrap reference */
 /*Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575.98px) {  }
+@media (max-width: 575.98px) {  
+  
+}
 
 /* Small devices (landscape phones, less than 768px)*/
-@media (max-width: 767.98px) {  }
-
+@media (max-width: 767.98px) {  
+  .main {
+     width:80%; 
+  }
+}
+@media (min-width: 767.98px) {  
+  .main {
+     width:50%; 
+  }
+}
 /* Medium devices (tablets, less than 992px)*/
-@media (max-width: 991.98px) {  }
+@media (min-width: 991.98px) {  
+  .main {
+     width:28.5%; 
+  }
+}
 
 /* Large devices (desktops, less than 1200px)*/
 @media (max-width: 1199.98px) {  }
@@ -113,3 +142,4 @@ body {
  * 
  * No media query since the extra-large breakpoint has no upper bound on its width
  */
+
