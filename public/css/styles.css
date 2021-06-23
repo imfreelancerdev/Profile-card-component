@@ -10,7 +10,12 @@
 .secondary{
   color:var(--secondary);
 }
-
+html{
+  box-sizing: border-box;
+}
+*,*::before,*::after{
+  box-sizing: inherit;
+}
 *{
   margin: 0;
   padding: 0;
@@ -21,9 +26,8 @@
 body{
   background-color: var(--background);
   background-image: url("../img/bg-pattern-top.svg"),url("../img/bg-pattern-bottom.svg");
-   background-size: 650px 650px,650px 650px ; 
    background-repeat: no-repeat,no-repeat;
-   background-position: 140% 500%,-50% -400%; 
+   background-position: right 50vw bottom 50vh, left 50vw top 50vh; 
 }
 
 .container{
@@ -37,13 +41,15 @@ body{
   justify-content: center;
 }
 .main {
-  width: 28.5%;
+  width: 327px;
   padding-top:22px;
 }
 .card{
   width: 100%;
   border-radius: 12px;
   background:#fff; 
+  overflow: hidden;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.7);
 }
 .card-header{
   height: 153px;
@@ -51,7 +57,6 @@ body{
   background-repeat:no-repeat; 
   background-size: cover; 
   background-position: center;
-  border-radius: 12px 12px 0 0;
 
 }
 .card-body{
@@ -115,40 +120,3 @@ body{
   font-size: .75rem;
   font-weight: 400;
 }
-
-/* Media querys from bootstrap reference */
-/*Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575.98px) {  
-  
-}
-
-/* Small devices (landscape phones, less than 768px)*/
-@media (max-width: 767.98px) {  
-  .main {
-     width:80%; 
-     
-  }
-  
-}
-@media (min-width: 767.99px) {  
-  .main {
-     width:50%; 
-  }
-  
-  
-}
-/* Medium devices (tablets, less than 992px)*/
-@media (min-width: 991.98px) {  
-  .main {
-     width:28.5%; 
-  }
-}
-
-/* Large devices (desktops, less than 1200px)*/
-@media (max-width: 1199.98px) {  }
-
-/* Extra large devices (large desktops)
- * 
- * No media query since the extra-large breakpoint has no upper bound on its width
- */
-
